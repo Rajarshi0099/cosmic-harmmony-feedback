@@ -23,8 +23,12 @@ Cosmic Harmmony - Client Feedback
 ===================================================== */
 
 * {
+
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+
+  -webkit-tap-highlight-color:
+    transparent;
+
 }
 
 
@@ -32,6 +36,7 @@ html,
 body {
 
   margin: 0;
+
   padding: 0;
 
   width: 100%;
@@ -43,9 +48,11 @@ body {
 
 body {
 
-  background: #f5f8f2;
+  background:
+    #f5f8f2;
 
-  color: #26352a;
+  color:
+    #26352a;
 
   font-family:
     Arial,
@@ -56,20 +63,24 @@ body {
 
 
 /* =====================================================
-   MAIN APP
+   APP
 ===================================================== */
 
 .app {
 
   width: 100%;
 
-  max-width: 560px;
+  max-width:
+    560px;
 
-  min-height: 100vh;
+  min-height:
+    100vh;
 
-  margin: 0 auto;
+  margin:
+    0 auto;
 
-  background: #ffffff;
+  background:
+    #ffffff;
 
 }
 
@@ -80,13 +91,17 @@ body {
 
 .header {
 
-  background: #315f39;
+  background:
+    #315f39;
 
-  color: #ffffff;
+  color:
+    #ffffff;
 
-  text-align: center;
+  text-align:
+    center;
 
-  padding: 24px 18px 21px;
+  padding:
+    24px 18px 21px;
 
 }
 
@@ -95,24 +110,31 @@ body {
 
   margin: 0;
 
-  font-size: 25px;
+  font-size:
+    25px;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .3px;
+  letter-spacing:
+    .3px;
 
 }
 
 
 .tagline {
 
-  margin: 5px 0 0;
+  margin:
+    5px 0 0;
 
-  font-size: 12px;
+  font-size:
+    12px;
 
-  font-style: italic;
+  font-style:
+    italic;
 
-  opacity: .92;
+  opacity:
+    .92;
 
 }
 
@@ -123,7 +145,8 @@ body {
 
 .content {
 
-  padding: 23px 17px 30px;
+  padding:
+    23px 17px 30px;
 
 }
 
@@ -132,65 +155,83 @@ body {
 
   margin: 0;
 
-  text-align: center;
+  text-align:
+    center;
 
-  color: #234d2c;
+  color:
+    #234d2c;
 
-  font-size: 22px;
+  font-size:
+    22px;
 
-  line-height: 1.3;
+  line-height:
+    1.3;
 
 }
 
 
 .intro {
 
-  margin: 8px auto 24px;
+  margin:
+    8px auto 24px;
 
-  max-width: 470px;
+  max-width:
+    470px;
 
-  text-align: center;
+  text-align:
+    center;
 
-  color: #687169;
+  color:
+    #687169;
 
-  font-size: 14px;
+  font-size:
+    14px;
 
-  line-height: 1.55;
+  line-height:
+    1.55;
 
 }
 
 
 /* =====================================================
-   QUESTIONS
+   QUESTION
 ===================================================== */
 
 .question {
 
-  margin-bottom: 22px;
+  margin-bottom:
+    22px;
 
 }
 
 
 .question-title {
 
-  display: block;
+  display:
+    block;
 
-  margin-bottom: 9px;
+  margin-bottom:
+    9px;
 
-  color: #26352a;
+  color:
+    #26352a;
 
-  font-size: 15px;
+  font-size:
+    15px;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  line-height: 1.45;
+  line-height:
+    1.45;
 
 }
 
 
 .required {
 
-  color: #c62828;
+  color:
+    #c62828;
 
 }
 
@@ -201,25 +242,36 @@ body {
 
 .text-input {
 
-  width: 100%;
+  width:
+    100%;
 
-  height: 49px;
+  height:
+    49px;
 
-  padding: 12px 13px;
+  padding:
+    12px 13px;
 
-  border: 1px solid #d5ddd6;
+  border:
+    1px solid #d5ddd6;
 
-  border-radius: 11px;
+  border-radius:
+    11px;
 
-  background: #ffffff;
+  background:
+    #ffffff;
 
-  color: #26352a;
+  color:
+    #26352a;
 
-  font-family: Arial, sans-serif;
+  font-family:
+    Arial,
+    sans-serif;
 
-  font-size: 16px;
+  font-size:
+    16px;
 
-  outline: none;
+  outline:
+    none;
 
 }
 
@@ -227,11 +279,100 @@ body {
 .text-input:focus,
 .textarea:focus {
 
-  border-color: #5b8c63;
+  border-color:
+    #5b8c63;
 
   box-shadow:
     0 0 0 2px
     rgba(49, 95, 57, .08);
+
+}
+
+
+/* =====================================================
+   SERVICE CHECKBOXES
+===================================================== */
+
+.service-options {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    8px;
+
+}
+
+
+.service-option {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  min-height:
+    48px;
+
+  padding:
+    11px 12px;
+
+  border:
+    1px solid #d7ded8;
+
+  border-radius:
+    10px;
+
+  background:
+    #ffffff;
+
+  color:
+    #26352a;
+
+  font-size:
+    14px;
+
+  cursor:
+    pointer;
+
+  transition:
+    background .15s ease,
+    border-color .15s ease;
+
+}
+
+
+.service-option.selected {
+
+  border-color:
+    #6b9872;
+
+  background:
+    #f1f7ef;
+
+}
+
+
+.service-option input {
+
+  width:
+    19px;
+
+  height:
+    19px;
+
+  margin:
+    0 10px 0 0;
+
+  accent-color:
+    #315f39;
+
+  flex-shrink:
+    0;
 
 }
 
@@ -242,40 +383,55 @@ body {
 
 .star-row {
 
-  display: flex;
+  display:
+    flex;
 
-  justify-content: center;
+  justify-content:
+    center;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 5px;
+  gap:
+    5px;
 
-  margin-top: 2px;
+  margin-top:
+    2px;
 
 }
 
 
 .star {
 
-  width: 48px;
+  width:
+    48px;
 
-  height: 48px;
+  height:
+    48px;
 
-  padding: 0;
+  padding:
+    0;
 
-  border: 0;
+  border:
+    0;
 
-  background: transparent;
+  background:
+    transparent;
 
-  color: #d9dedb;
+  color:
+    #d9dedb;
 
-  font-size: 38px;
+  font-size:
+    38px;
 
-  line-height: 48px;
+  line-height:
+    48px;
 
-  text-align: center;
+  text-align:
+    center;
 
-  cursor: pointer;
+  cursor:
+    pointer;
 
   transition:
     color .12s ease,
@@ -286,7 +442,8 @@ body {
 
 .star.selected {
 
-  color: #e5b52c;
+  color:
+    #e5b52c;
 
 }
 
@@ -301,15 +458,20 @@ body {
 
 .rating-message {
 
-  min-height: 20px;
+  min-height:
+    20px;
 
-  margin-top: 3px;
+  margin-top:
+    3px;
 
-  text-align: center;
+  text-align:
+    center;
 
-  color: #687169;
+  color:
+    #687169;
 
-  font-size: 12px;
+  font-size:
+    12px;
 
 }
 
@@ -320,108 +482,146 @@ body {
 
 .options {
 
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: column;
+  flex-direction:
+    column;
 
-  gap: 8px;
+  gap:
+    8px;
 
 }
 
 
 .option {
 
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  min-height: 48px;
+  min-height:
+    48px;
 
-  padding: 11px 12px;
+  padding:
+    11px 12px;
 
-  border: 1px solid #d7ded8;
+  border:
+    1px solid #d7ded8;
 
-  border-radius: 10px;
+  border-radius:
+    10px;
 
-  background: #ffffff;
+  background:
+    #ffffff;
 
-  color: #26352a;
+  color:
+    #26352a;
 
-  font-size: 14px;
+  font-size:
+    14px;
 
-  cursor: pointer;
+  cursor:
+    pointer;
 
 }
 
 
 .option.selected {
 
-  border-color: #6b9872;
+  border-color:
+    #6b9872;
 
-  background: #f1f7ef;
+  background:
+    #f1f7ef;
 
 }
 
 
 .option input {
 
-  width: 18px;
+  width:
+    18px;
 
-  height: 18px;
+  height:
+    18px;
 
-  margin: 0 10px 0 0;
+  margin:
+    0 10px 0 0;
 
-  accent-color: #315f39;
+  accent-color:
+    #315f39;
 
-  flex-shrink: 0;
+  flex-shrink:
+    0;
 
 }
 
 
 /* =====================================================
-   EXPERIENCE
+   TEXTAREA
 ===================================================== */
 
 .textarea {
 
-  width: 100%;
+  width:
+    100%;
 
-  min-height: 115px;
+  min-height:
+    115px;
 
-  padding: 13px;
+  padding:
+    13px;
 
-  border: 1px solid #d5ddd6;
+  border:
+    1px solid #d5ddd6;
 
-  border-radius: 11px;
+  border-radius:
+    11px;
 
-  background: #ffffff;
+  background:
+    #ffffff;
 
-  color: #26352a;
+  color:
+    #26352a;
 
-  font-family: Arial, sans-serif;
+  font-family:
+    Arial,
+    sans-serif;
 
-  font-size: 16px;
+  font-size:
+    16px;
 
-  line-height: 1.5;
+  line-height:
+    1.5;
 
-  resize: none;
+  resize:
+    none;
 
-  outline: none;
+  outline:
+    none;
 
 }
 
 
 .character-row {
 
-  display: flex;
+  display:
+    flex;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
-  margin-top: 6px;
+  margin-top:
+    6px;
 
-  color: #858d87;
+  color:
+    #858d87;
 
-  font-size: 11px;
+  font-size:
+    11px;
 
 }
 
@@ -432,60 +632,79 @@ body {
 
 .error {
 
-  margin-bottom: 15px;
+  margin-bottom:
+    15px;
 
-  padding: 12px;
+  padding:
+    12px;
 
   border:
     1px solid #f0c8c5;
 
-  border-radius: 10px;
+  border-radius:
+    10px;
 
-  background: #fff0ef;
+  background:
+    #fff0ef;
 
-  color: #b3261e;
+  color:
+    #b3261e;
 
-  font-size: 13px;
+  font-size:
+    13px;
 
-  line-height: 1.45;
+  line-height:
+    1.45;
 
 }
 
 
 /* =====================================================
-   SUBMIT BUTTON
+   SUBMIT
 ===================================================== */
 
 .submit-button {
 
-  width: 100%;
+  width:
+    100%;
 
-  min-height: 54px;
+  min-height:
+    54px;
 
-  padding: 13px;
+  padding:
+    13px;
 
-  border: 0;
+  border:
+    0;
 
-  border-radius: 12px;
+  border-radius:
+    12px;
 
-  background: #315f39;
+  background:
+    #315f39;
 
-  color: #ffffff;
+  color:
+    #ffffff;
 
-  font-size: 17px;
+  font-size:
+    17px;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  cursor: pointer;
+  cursor:
+    pointer;
 
 }
 
 
 .submit-button:disabled {
 
-  opacity: .65;
+  opacity:
+    .65;
 
-  cursor: wait;
+  cursor:
+    wait;
 
 }
 
@@ -496,13 +715,14 @@ body {
 
 #submitFrame {
 
-  display: none;
+  display:
+    none;
 
 }
 
 
 /* =====================================================
-   SUCCESS PAGE
+   SUCCESS
 ===================================================== */
 
 .success {
@@ -510,31 +730,39 @@ body {
   padding:
     30px 8px 15px;
 
-  text-align: center;
+  text-align:
+    center;
 
 }
 
 
 .success-heart {
 
-  margin-bottom: 7px;
+  margin-bottom:
+    7px;
 
-  font-size: 48px;
+  font-size:
+    48px;
 
-  line-height: 1;
+  line-height:
+    1;
 
 }
 
 
 .success-title {
 
-  margin: 0;
+  margin:
+    0;
 
-  color: #315f39;
+  color:
+    #315f39;
 
-  font-size: 25px;
+  font-size:
+    25px;
 
-  line-height: 1.3;
+  line-height:
+    1.3;
 
 }
 
@@ -544,103 +772,17 @@ body {
   margin:
     12px auto 0;
 
-  max-width: 430px;
+  max-width:
+    430px;
 
-  color: #626c64;
+  color:
+    #626c64;
 
-  font-size: 14px;
+  font-size:
+    14px;
 
-  line-height: 1.6;
-
-}
-
-
-/* =====================================================
-   GIFT BOX
-===================================================== */
-
-.gift-box {
-
-  margin-top: 22px;
-
-  padding:
-    20px 15px 17px;
-
-  border:
-    1px solid #d5e4ce;
-
-  border-radius: 17px;
-
-  background: #f3f8ed;
-
-}
-
-
-.gift-icon {
-
-  margin-bottom: 7px;
-
-  font-size: 35px;
-
-  line-height: 1;
-
-}
-
-
-.gift-title {
-
-  margin: 0;
-
-  color: #315f39;
-
-  font-size: 19px;
-
-  line-height: 1.35;
-
-}
-
-
-.gift-description {
-
-  margin:
-    10px auto 15px;
-
-  max-width: 390px;
-
-  color: #626c64;
-
-  font-size: 13px;
-
-  line-height: 1.55;
-
-}
-
-
-.gift-button {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 100%;
-
-  min-height: 51px;
-
-  padding: 12px;
-
-  border-radius: 11px;
-
-  background: #315f39;
-
-  color: #ffffff;
-
-  text-decoration: none;
-
-  font-size: 16px;
-
-  font-weight: 700;
+  line-height:
+    1.6;
 
 }
 
@@ -654,11 +796,14 @@ body {
   padding:
     5px 15px 22px;
 
-  text-align: center;
+  text-align:
+    center;
 
-  color: #909890;
+  color:
+    #909890;
 
-  font-size: 11px;
+  font-size:
+    11px;
 
 }
 
@@ -669,7 +814,8 @@ body {
 
 .hidden {
 
-  display: none !important;
+  display:
+    none !important;
 
 }
 
@@ -779,17 +925,6 @@ body {
 
   }
 
-
-  .gift-box {
-
-    margin-top:
-      20px;
-
-    padding:
-      18px 14px 15px;
-
-  }
-
 }
 
 </style>
@@ -842,8 +977,9 @@ body {
 <p class="intro">
 
   Thank you for choosing
-  Cosmic Harmmony for your Name Correction.
-  Please take a moment to share your experience.
+  Cosmic Harmmony.
+  Please take a moment to share
+  your experience with us.
 
 </p>
 
@@ -890,75 +1026,130 @@ body {
 
   <label class="question-title">
 
-    2. How would you rate your overall experience?
+    2. Which Cosmic Harmmony service(s)
+    did you receive?
 
     <span class="required">*</span>
 
   </label>
 
 
-  <div class="star-row">
+  <div class="service-options">
 
 
-    <button
-      type="button"
-      class="star"
-      data-rating="1"
-      aria-label="1 star"
-    >
-      ★
-    </button>
+    <label class="service-option">
+
+      <input
+
+        type="checkbox"
+
+        name="services"
+
+        value="Name Correction"
+
+      >
+
+      <span>
+        Name Correction
+      </span>
+
+    </label>
 
 
-    <button
-      type="button"
-      class="star"
-      data-rating="2"
-      aria-label="2 stars"
-    >
-      ★
-    </button>
+    <label class="service-option">
+
+      <input
+
+        type="checkbox"
+
+        name="services"
+
+        value="Mobile Number Analysis"
+
+      >
+
+      <span>
+        Mobile Number Analysis
+      </span>
+
+    </label>
 
 
-    <button
-      type="button"
-      class="star"
-      data-rating="3"
-      aria-label="3 stars"
-    >
-      ★
-    </button>
+    <label class="service-option">
+
+      <input
+
+        type="checkbox"
+
+        name="services"
+
+        value="Full Numerology Report"
+
+      >
+
+      <span>
+        Full Numerology Report
+      </span>
+
+    </label>
 
 
-    <button
-      type="button"
-      class="star"
-      data-rating="4"
-      aria-label="4 stars"
-    >
-      ★
-    </button>
+    <label class="service-option">
+
+      <input
+
+        type="checkbox"
+
+        name="services"
+
+        value="Vastu Consultation"
+
+      >
+
+      <span>
+        Vastu Consultation
+      </span>
+
+    </label>
 
 
-    <button
-      type="button"
-      class="star"
-      data-rating="5"
-      aria-label="5 stars"
-    >
-      ★
-    </button>
+    <label class="service-option">
+
+      <input
+
+        type="checkbox"
+
+        name="services"
+
+        value="Vedic Numerology / 10-Year Prediction"
+
+      >
+
+      <span>
+        Vedic Numerology / 10-Year Prediction
+      </span>
+
+    </label>
 
 
-  </div>
+    <label class="service-option">
 
+      <input
 
-  <div
-    id="ratingMessage"
-    class="rating-message"
-  >
+        type="checkbox"
 
-    Please select a rating
+        name="services"
+
+        value="Signature Analysis"
+
+      >
+
+      <span>
+        Signature Analysis
+      </span>
+
+    </label>
+
 
   </div>
 
@@ -973,67 +1164,103 @@ body {
 
   <label class="question-title">
 
-    3. Are you satisfied with your corrected name?
+    3. How would you rate your overall experience?
 
     <span class="required">*</span>
 
   </label>
 
 
-  <div class="options">
+  <div class="star-row">
 
 
-    <label class="option">
+    <button
 
-      <input
-        type="radio"
-        name="satisfaction"
-        value="Very Satisfied"
-      >
+      type="button"
 
-      Very Satisfied
+      class="star"
 
-    </label>
+      data-rating="1"
 
+      aria-label="1 star"
 
-    <label class="option">
-
-      <input
-        type="radio"
-        name="satisfaction"
-        value="Satisfied"
-      >
-
-      Satisfied
-
-    </label>
+    >
+      ★
+    </button>
 
 
-    <label class="option">
+    <button
 
-      <input
-        type="radio"
-        name="satisfaction"
-        value="Neutral"
-      >
+      type="button"
 
-      Neutral
+      class="star"
 
-    </label>
+      data-rating="2"
+
+      aria-label="2 stars"
+
+    >
+      ★
+    </button>
 
 
-    <label class="option">
+    <button
 
-      <input
-        type="radio"
-        name="satisfaction"
-        value="Not Satisfied"
-      >
+      type="button"
 
-      Not Satisfied
+      class="star"
 
-    </label>
+      data-rating="3"
 
+      aria-label="3 stars"
+
+    >
+      ★
+    </button>
+
+
+    <button
+
+      type="button"
+
+      class="star"
+
+      data-rating="4"
+
+      aria-label="4 stars"
+
+    >
+      ★
+    </button>
+
+
+    <button
+
+      type="button"
+
+      class="star"
+
+      data-rating="5"
+
+      aria-label="5 stars"
+
+    >
+      ★
+    </button>
+
+
+  </div>
+
+
+  <div
+
+    id="ratingMessage"
+
+    class="rating-message"
+
+  >
+
+    Please select a rating
 
   </div>
 
@@ -1048,8 +1275,100 @@ body {
 
   <label class="question-title">
 
-    4. How was your overall experience
-    with Cosmic Harmmony?
+    4. How satisfied are you with
+    the service(s) you received?
+
+    <span class="required">*</span>
+
+  </label>
+
+
+  <div class="options">
+
+
+    <label class="option">
+
+      <input
+
+        type="radio"
+
+        name="satisfaction"
+
+        value="Very Satisfied"
+
+      >
+
+      Very Satisfied
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+
+        type="radio"
+
+        name="satisfaction"
+
+        value="Satisfied"
+
+      >
+
+      Satisfied
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+
+        type="radio"
+
+        name="satisfaction"
+
+        value="Neutral"
+
+      >
+
+      Neutral
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+
+        type="radio"
+
+        name="satisfaction"
+
+        value="Not Satisfied"
+
+      >
+
+      Not Satisfied
+
+    </label>
+
+
+  </div>
+
+</div>
+
+
+<!-- =================================================
+     QUESTION 5
+================================================= -->
+
+<div class="question">
+
+  <label class="question-title">
+
+    5. Please share a few words about
+    your experience with Cosmic Harmmony.
 
     <span class="required">*</span>
 
@@ -1064,7 +1383,7 @@ body {
 
     maxlength="200"
 
-    placeholder="Please share a few words about your experience..."
+    placeholder="Please share your experience..."
 
   ></textarea>
 
@@ -1085,15 +1404,15 @@ body {
 
 
 <!-- =================================================
-     QUESTION 5
+     QUESTION 6
 ================================================= -->
 
 <div class="question">
 
   <label class="question-title">
 
-    5. How did you find the guidance
-    provided in the report?
+    6. How helpful did you find
+    the guidance provided?
 
     <span class="required">*</span>
 
@@ -1106,9 +1425,13 @@ body {
     <label class="option">
 
       <input
+
         type="radio"
+
         name="guidance"
+
         value="Very Helpful"
+
       >
 
       Very Helpful
@@ -1119,9 +1442,13 @@ body {
     <label class="option">
 
       <input
+
         type="radio"
+
         name="guidance"
+
         value="Helpful"
+
       >
 
       Helpful
@@ -1132,9 +1459,13 @@ body {
     <label class="option">
 
       <input
+
         type="radio"
+
         name="guidance"
+
         value="Average"
+
       >
 
       Average
@@ -1145,9 +1476,13 @@ body {
     <label class="option">
 
       <input
+
         type="radio"
+
         name="guidance"
+
         value="Not Helpful"
+
       >
 
       Not Helpful
@@ -1161,14 +1496,15 @@ body {
 
 
 <!-- =================================================
-     QUESTION 6
+     QUESTION 7
 ================================================= -->
 
 <div class="question">
 
   <label class="question-title">
 
-    6. Would you recommend our services to anyone?
+    7. Would you recommend our services
+    to anyone?
 
     <span class="required">*</span>
 
@@ -1181,9 +1517,13 @@ body {
     <label class="option">
 
       <input
+
         type="radio"
+
         name="recommendation"
+
         value="Definitely Yes"
+
       >
 
       Definitely Yes
@@ -1194,9 +1534,13 @@ body {
     <label class="option">
 
       <input
+
         type="radio"
+
         name="recommendation"
+
         value="Maybe"
+
       >
 
       Maybe
@@ -1207,9 +1551,13 @@ body {
     <label class="option">
 
       <input
+
         type="radio"
+
         name="recommendation"
+
         value="No"
+
       >
 
       No
@@ -1227,21 +1575,16 @@ body {
 ================================================= -->
 
 <div
+
   id="error"
+
   class="error hidden"
+
 ></div>
 
 
 <!-- =================================================
      HIDDEN IFRAME
-
-     IMPORTANT:
-     The form submission goes directly to the
-     Apps Script API using a normal GET request.
-
-     No fetch()
-     No Canva API
-     No CORS JavaScript
 ================================================= -->
 
 <iframe
@@ -1256,7 +1599,7 @@ body {
 
 
 <!-- =================================================
-     BACKEND SUBMISSION FORM
+     API FORM
 ================================================= -->
 
 <form
@@ -1273,58 +1616,101 @@ body {
 
 
   <input
+
     type="hidden"
+
     name="api"
+
     value="submit"
+
   >
 
 
   <input
+
     type="hidden"
+
     id="apiClientId"
+
     name="clientId"
+
   >
 
 
   <input
+
     type="hidden"
+
     id="apiClientName"
+
     name="clientName"
+
   >
 
 
   <input
+
     type="hidden"
+
+    id="apiServices"
+
+    name="services"
+
+  >
+
+
+  <input
+
+    type="hidden"
+
     id="apiRating"
+
     name="rating"
+
   >
 
 
   <input
+
     type="hidden"
+
     id="apiSatisfaction"
+
     name="satisfaction"
+
   >
 
 
   <input
+
     type="hidden"
+
     id="apiFeedback"
+
     name="feedback"
+
   >
 
 
   <input
+
     type="hidden"
+
     id="apiGuidance"
+
     name="guidance"
+
   >
 
 
   <input
+
     type="hidden"
+
     id="apiRecommendation"
+
     name="recommendation"
+
   >
 
 
@@ -1372,66 +1758,20 @@ body {
 
 
   <h2 class="success-title">
+
     Thank You!
+
   </h2>
 
 
-  <p
-    id="successMessage"
-    class="success-message"
-  ></p>
+  <p class="success-message">
 
+    Thank you for taking the time
+    to share your valuable feedback.
+    Your feedback helps us improve
+    our services and serve our clients better.
 
-  <!-- =================================================
-       GIFT
-  ================================================= -->
-
-  <div
-    id="giftBox"
-    class="gift-box hidden"
-  >
-
-
-    <div class="gift-icon">
-      🎁
-    </div>
-
-
-    <h3 class="gift-title">
-
-      Your Complimentary Vastu Gift
-
-    </h3>
-
-
-    <p class="gift-description">
-
-      As a token of appreciation for
-      sharing your experience, your
-      complimentary Vastu Supportive
-      Remedies Guide is ready for you.
-
-    </p>
-
-
-    <a
-
-      class="gift-button"
-
-      href="https://drive.google.com/file/d/1yEKiqcOy0zmHz6oixxcqHos3ULLYXh2k/view?usp=sharing"
-
-      target="_blank"
-
-      rel="noopener noreferrer"
-
-    >
-
-      🎁 Get Your Vastu Guide
-
-    </a>
-
-
-  </div>
+  </p>
 
 
 </section>
@@ -1468,110 +1808,143 @@ let submissionFinished = false;
 ===================================================== */
 
 const stars =
-  document.querySelectorAll(".star");
+  document.querySelectorAll(
+    ".star"
+  );
 
 
-stars.forEach(function(star) {
+stars.forEach(
+  function(star) {
 
 
-  star.addEventListener(
-    "click",
-    function() {
+    star.addEventListener(
+      "click",
+      function() {
 
 
-      if (submissionStarted) {
+        if (
+          submissionStarted
+        ) {
 
-        return;
+          return;
 
-      }
+        }
 
 
-      selectedRating =
-        Number(
-          star.dataset.rating
+        selectedRating =
+          Number(
+            star.dataset.rating
+          );
+
+
+        stars.forEach(
+          function(item) {
+
+
+            item.classList.toggle(
+
+              "selected",
+
+              Number(
+                item.dataset.rating
+              ) <= selectedRating
+
+            );
+
+          }
         );
 
 
-      stars.forEach(
-        function(item) {
-
-
-          item.classList.toggle(
-
-            "selected",
-
-            Number(
-              item.dataset.rating
-            ) <= selectedRating
-
+        const message =
+          document.getElementById(
+            "ratingMessage"
           );
+
+
+        if (
+          selectedRating === 5
+        ) {
+
+          message.textContent =
+            "Excellent! Thank you for your feedback.";
+
+        }
+
+        else if (
+          selectedRating === 4
+        ) {
+
+          message.textContent =
+            "Thank you for your feedback.";
+
+        }
+
+        else if (
+          selectedRating === 3
+        ) {
+
+          message.textContent =
+            "Thank you for your honest feedback.";
+
+        }
+
+        else {
+
+          message.textContent =
+            "Thank you for your honest feedback.";
+
+        }
+
+      }
+
+    );
+
+  }
+);
+
+
+/* =====================================================
+   SERVICE CHECKBOX VISUALS
+===================================================== */
+
+document
+  .querySelectorAll(
+    '.service-option input'
+  )
+  .forEach(
+    function(input) {
+
+
+      input.addEventListener(
+        "change",
+        function() {
+
+
+          input
+            .closest(
+              ".service-option"
+            )
+            .classList
+            .toggle(
+              "selected",
+              input.checked
+            );
 
         }
       );
 
-
-      const message =
-        document.getElementById(
-          "ratingMessage"
-        );
-
-
-      if (
-        selectedRating === 5
-      ) {
-
-        message.textContent =
-          "Excellent! Thank you for your feedback. ❤️";
-
-      }
-
-      else if (
-        selectedRating === 4
-      ) {
-
-        message.textContent =
-          "Thank you! We're glad you had a good experience. ❤️";
-
-      }
-
-      else if (
-        selectedRating === 3
-      ) {
-
-        message.textContent =
-          "Thank you for your honest feedback.";
-
-      }
-
-      else if (
-        selectedRating === 2
-      ) {
-
-        message.textContent =
-          "We appreciate your honest feedback.";
-
-      }
-
-      else {
-
-        message.textContent =
-          "We appreciate your honest feedback.";
-
-      }
-
     }
-
   );
-
-});
 
 
 /* =====================================================
-   RADIO BUTTON VISUALS
+   RADIO VISUALS
 ===================================================== */
 
 document
-  .querySelectorAll(".option input")
+  .querySelectorAll(
+    ".option input"
+  )
   .forEach(
     function(input) {
 
@@ -1592,7 +1965,9 @@ document
 
 
                 item
-                  .closest(".option")
+                  .closest(
+                    ".option"
+                  )
                   .classList
                   .remove(
                     "selected"
@@ -1603,7 +1978,9 @@ document
 
 
           input
-            .closest(".option")
+            .closest(
+              ".option"
+            )
             .classList
             .add(
               "selected"
@@ -1621,7 +1998,9 @@ document
 ===================================================== */
 
 document
-  .getElementById("experience")
+  .getElementById(
+    "experience"
+  )
   .addEventListener(
     "input",
     function() {
@@ -1665,8 +2044,13 @@ function showError(
 
 
   error.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
+
+    behavior:
+      "smooth",
+
+    block:
+      "center"
+
   });
 
 }
@@ -1681,7 +2065,7 @@ function generateClientId() {
 
   return (
 
-    "CANVA-" +
+    "CH-" +
 
     Date.now() +
 
@@ -1704,14 +2088,17 @@ function generateClientId() {
 function showSuccessPage() {
 
 
-  if (submissionFinished) {
+  if (
+    submissionFinished
+  ) {
 
     return;
 
   }
 
 
-  submissionFinished = true;
+  submissionFinished =
+    true;
 
 
   document
@@ -1732,57 +2119,6 @@ function showSuccessPage() {
     .remove(
       "hidden"
     );
-
-
-  const successMessage =
-    document.getElementById(
-      "successMessage"
-    );
-
-
-  /*
-   * 4 or 5 stars
-   */
-
-  if (
-    selectedRating >= 4
-  ) {
-
-
-    successMessage.innerHTML =
-
-      "Thank you for your valuable feedback!<br>" +
-
-      "Your complimentary Vastu guide is ready for you.";
-
-
-    document
-      .getElementById(
-        "giftBox"
-      )
-      .classList
-      .remove(
-        "hidden"
-      );
-
-
-  }
-
-
-  /*
-   * 1, 2 or 3 stars
-   */
-
-  else {
-
-
-    successMessage.innerHTML =
-
-      "Thank you for sharing your honest feedback.<br>" +
-
-      "Your feedback helps us improve our services.";
-
-  }
 
 
   window.scrollTo(
@@ -1833,6 +2169,20 @@ document
           .trim();
 
 
+      const selectedServices =
+        Array.from(
+          document.querySelectorAll(
+            'input[name="services"]:checked'
+          )
+        ).map(
+          function(item) {
+
+            return item.value;
+
+          }
+        );
+
+
       const satisfaction =
         document
           .querySelector(
@@ -1872,6 +2222,23 @@ document
 
         showError(
           "Please enter your name."
+        );
+
+        return;
+
+      }
+
+
+      /* ---------------------------------------------
+         VALIDATE SERVICES
+      --------------------------------------------- */
+
+      if (
+        selectedServices.length === 0
+      ) {
+
+        showError(
+          "Please select at least one service."
         );
 
         return;
@@ -1946,7 +2313,7 @@ document
       if (!guidance) {
 
         showError(
-          "Please tell us how you found the guidance provided in the report."
+          "Please tell us how helpful you found the guidance."
         );
 
         return;
@@ -1973,7 +2340,8 @@ document
          START SUBMISSION
       --------------------------------------------- */
 
-      submissionStarted = true;
+      submissionStarted =
+        true;
 
 
       const button =
@@ -1982,7 +2350,8 @@ document
         );
 
 
-      button.disabled = true;
+      button.disabled =
+        true;
 
 
       button.textContent =
@@ -2007,6 +2376,24 @@ document
         )
         .value =
         name;
+
+
+      /*
+       * IMPORTANT:
+       *
+       * Multiple services are sent as:
+       *
+       * Name Correction, Vastu Consultation
+       */
+
+      document
+        .getElementById(
+          "apiServices"
+        )
+        .value =
+        selectedServices.join(
+          ", "
+        );
 
 
       document
@@ -2050,15 +2437,11 @@ document
 
 
       /* ---------------------------------------------
-         SEND NORMAL GET FORM
-
-         IMPORTANT:
-         No fetch()
-         No XMLHttpRequest()
-         No CORS JavaScript
-
-         This is the same method that we
-         successfully tested with APITest.html.
+         NORMAL GET FORM SUBMISSION
+         ---------------------------------------------
+         This is important because it avoids CORS
+         problems and is the method that worked
+         during our previous test.
       --------------------------------------------- */
 
       document
@@ -2085,22 +2468,14 @@ document
     function() {
 
 
-      /*
-       * Ignore any load before the user
-       * actually submitted the form.
-       */
-
-      if (!submissionStarted) {
+      if (
+        !submissionStarted
+      ) {
 
         return;
 
       }
 
-
-      /*
-       * Apps Script has returned.
-       * Now show the Thank You page.
-       */
 
       showSuccessPage();
 
