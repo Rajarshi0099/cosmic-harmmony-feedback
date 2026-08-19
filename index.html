@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+Cosmic Harmmony - Client Feedback
+</title>
+
+
+<style>
+
+/* ================================
+   BASIC RESET
+================================ */
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+body {
+
+  margin: 0;
+
+  background: #f5f8f2;
+
+  color: #26352a;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+}
+
+
+/* ================================
+   MAIN APP
+================================ */
+
+.app {
+
+  width: 100%;
+
+  max-width: 520px;
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  background: #ffffff;
+
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+
+  background: #315f39;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 28px 20px 24px;
+
+}
+
+
+.brand {
+
+  margin: 0;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+}
+
+
+.tagline {
+
+  margin: 7px 0 0;
+
+  font-size: 13px;
+
+  opacity: 0.9;
+
+  font-style: italic;
+
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.content {
+
+  padding: 24px 18px 30px;
+
+}
+
+
+h2 {
+
+  text-align: center;
+
+  color: #234d2c;
+
+  font-size: 22px;
+
+  margin: 0 0 8px;
+
+  line-height: 1.3;
+
+}
+
+
+.intro {
+
+  text-align: center;
+
+  color: #687169;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  margin: 0 0 27px;
+
+}
+
+
+/* ================================
+   QUESTIONS
+================================ */
+
+.question {
+
+  margin-bottom: 25px;
+
+}
+
+
+.title {
+
+  display: block;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.45;
+
+  margin-bottom: 10px;
+
+}
+
+
+.required {
+
+  color: #c0392b;
+
+}
+
+
+/* ================================
+   NAME INPUT
+================================ */
+
+input[type="text"] {
+
+  width: 100%;
+
+  height: 50px;
+
+  padding: 14px;
+
+  border: 1px solid #d5ddd6;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  background: white;
+
+}
+
+
+input[type="text"]:focus,
+textarea:focus {
+
+  border-color: #5b8c63;
+
+}
+
+
+/* ================================
+   STAR RATING
+================================ */
+
+.stars {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 4px;
+
+}
+
+
+.star {
+
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 39px;
+
+  color: #d6dbd7;
+
+  cursor: pointer;
+
+  user-select: none;
+
+}
+
+
+.star.active {
+
+  color: #e0ad25;
+
+}
+
+
+.rating-text {
+
+  text-align: center;
+
+  color: #6d766f;
+
+  font-size: 13px;
+
+  min-height: 20px;
+
+}
+
+
+/* ================================
+   RADIO OPTIONS
+================================ */
+
+.options {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+}
+
+
+.option {
+
+  display: flex;
+
+  align-items: center;
+
+  min-height: 49px;
+
+  padding: 12px 13px;
+
+  border: 1px solid #d7ded8;
+
+  border-radius: 11px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+}
+
+
+.option.selected {
+
+  border-color: #5b8c63;
+
+  background: #f1f7ef;
+
+}
+
+
+.option input {
+
+  width: 18px;
+
+  height: 18px;
+
+  margin: 0 11px 0 0;
+
+  accent-color: #315f39;
+
+}
+
+
+/* ================================
+   EXPERIENCE
+================================ */
+
+textarea {
+
+  width: 100%;
+
+  min-height: 125px;
+
+  padding: 14px;
+
+  border: 1px solid #d5ddd6;
+
+  border-radius: 12px;
+
+  resize: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.55;
+
+  outline: none;
+
+}
+
+
+.character-count {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 7px;
+
+  font-size: 11px;
+
+  color: #818981;
+
+}
+
+
+/* ================================
+   ERROR
+================================ */
+
+.error {
+
+  background: #fff0ef;
+
+  border: 1px solid #f1cecb;
+
+  color: #b3261e;
+
+  border-radius: 11px;
+
+  padding: 12px;
+
+  font-size: 13px;
+
+  margin-bottom: 15px;
+
+}
+
+
+/* ================================
+   SUBMIT
+================================ */
+
+.submit-button {
+
+  width: 100%;
+
+  min-height: 54px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  background: #315f39;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+}
+
+
+.submit-button:disabled {
+
+  opacity: 0.65;
+
+  cursor: wait;
+
+}
+
+
+/* ================================
+   THANK YOU
+================================ */
+
+.thank-you {
+
+  text-align: center;
+
+  padding: 40px 8px 20px;
+
+}
+
+
+.heart {
+
+  font-size: 50px;
+
+}
+
+
+.thank-you h2 {
+
+  color: #315f39;
+
+}
+
+
+.thank-you p {
+
+  color: #626c64;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+}
+
+
+/* ================================
+   GIFT BOX
+================================ */
+
+.gift {
+
+  margin-top: 24px;
+
+  padding: 22px 17px;
+
+  border-radius: 17px;
+
+  background: #f3f8ed;
+
+  border: 1px solid #d7e5d0;
+
+}
+
+
+.gift-icon {
+
+  font-size: 37px;
+
+}
+
+
+.gift h3 {
+
+  color: #315f39;
+
+  margin: 8px 0;
+
+  font-size: 19px;
+
+}
+
+
+.gift a {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 52px;
+
+  background: #315f39;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  margin-top: 15px;
+
+}
+
+
+/* ================================
+   HIDDEN
+================================ */
+
+.hidden {
+
+  display: none !important;
+
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+
+  text-align: center;
+
+  padding: 5px 15px 25px;
+
+  color: #8a928c;
+
+  font-size: 11px;
+
+}
+
+
+/* ================================
+   HIDDEN IFRAME
+================================ */
+
+#submitFrame {
+
+  display: none;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header class="header">
+
+  <h1 class="brand">
+    COSMIC HARMMONY
+  </h1>
+
+  <p class="tagline">
+    Decode Your Destiny, Design Your Space
+  </p>
+
+</header>
+
+
+<main class="content">
+
+
+<!-- =================================
+     FEEDBACK FORM
+================================= -->
+
+<section id="feedbackForm">
+
+
+<h2>
+  We'd Love Your Feedback
+</h2>
+
+
+<p class="intro">
+
+  Thank you for choosing Cosmic Harmmony
+  for your Name Correction.
+  Please take a moment to share your experience.
+
+</p>
+
+
+<!-- QUESTION 1 -->
+
+<div class="question">
+
+  <label class="title">
+
+    1. Your Name
+
+    <span class="required">*</span>
+
+  </label>
+
+
+  <input
+    type="text"
+    id="clientName"
+    maxlength="100"
+    placeholder="Enter your name"
+  >
+
+</div>
+
+
+<!-- QUESTION 2 -->
+
+<div class="question">
+
+  <label class="title">
+
+    2. How would you rate your overall experience?
+
+    <span class="required">*</span>
+
+  </label>
+
+
+  <div class="stars">
+
+    <span
+      class="star"
+      data-rating="1"
+    >
+      ★
+    </span>
+
+    <span
+      class="star"
+      data-rating="2"
+    >
+      ★
+    </span>
+
+    <span
+      class="star"
+      data-rating="3"
+    >
+      ★
+    </span>
+
+    <span
+      class="star"
+      data-rating="4"
+    >
+      ★
+    </span>
+
+    <span
+      class="star"
+      data-rating="5"
+    >
+      ★
+    </span>
+
+  </div>
+
+
+  <div
+    id="ratingText"
+    class="rating-text"
+  >
+
+    Please select a rating
+
+  </div>
+
+</div>
+
+
+<!-- QUESTION 3 -->
+
+<div class="question">
+
+  <label class="title">
+
+    3. Are you satisfied with your corrected name?
+
+    <span class="required">*</span>
+
+  </label>
+
+
+  <div class="options">
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="satisfaction"
+        value="Very Satisfied"
+      >
+
+      Very Satisfied
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="satisfaction"
+        value="Satisfied"
+      >
+
+      Satisfied
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="satisfaction"
+        value="Neutral"
+      >
+
+      Neutral
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="satisfaction"
+        value="Not Satisfied"
+      >
+
+      Not Satisfied
+
+    </label>
+
+
+  </div>
+
+</div>
+
+
+<!-- QUESTION 4 -->
+
+<div class="question">
+
+  <label class="title">
+
+    4. How was your overall experience
+    with Cosmic Harmmony?
+
+    <span class="required">*</span>
+
+  </label>
+
+
+  <textarea
+    id="experience"
+    maxlength="200"
+    placeholder="Please share a few words about your experience..."
+  ></textarea>
+
+
+  <div class="character-count">
+
+    <span>
+      Minimum 20 characters
+    </span>
+
+    <b id="characterCount">
+      0 / 200
+    </b>
+
+  </div>
+
+</div>
+
+
+<!-- QUESTION 5 -->
+
+<div class="question">
+
+  <label class="title">
+
+    5. How did you find the guidance
+    provided in the report?
+
+    <span class="required">*</span>
+
+  </label>
+
+
+  <div class="options">
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="guidance"
+        value="Very Helpful"
+      >
+
+      Very Helpful
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="guidance"
+        value="Helpful"
+      >
+
+      Helpful
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="guidance"
+        value="Average"
+      >
+
+      Average
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="guidance"
+        value="Not Helpful"
+      >
+
+      Not Helpful
+
+    </label>
+
+
+  </div>
+
+</div>
+
+
+<!-- QUESTION 6 -->
+
+<div class="question">
+
+  <label class="title">
+
+    6. Would you recommend our services to anyone?
+
+    <span class="required">*</span>
+
+  </label>
+
+
+  <div class="options">
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="recommendation"
+        value="Definitely Yes"
+      >
+
+      Definitely Yes
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="recommendation"
+        value="Maybe"
+      >
+
+      Maybe
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="recommendation"
+        value="No"
+      >
+
+      No
+
+    </label>
+
+
+  </div>
+
+</div>
+
+
+<!-- ERROR -->
+
+<div
+  id="error"
+  class="error hidden"
+></div>
+
+
+<!--
+  HIDDEN SUBMISSION FORM
+
+  This sends the data to your
+  already-tested Apps Script API.
+-->
+
+<iframe
+  name="submitFrame"
+  id="submitFrame"
+></iframe>
+
+
+<form
+  id="apiForm"
+
+  method="GET"
+
+  action="https://script.google.com/macros/s/AKfycbywO6c54iob9ndxMsrSTHeDdvr_miZNEvo_r0mydmc_UNY6bnEU94GPNSmqePGaaAY/exec"
+
+  target="submitFrame"
+>
+
+
+  <input
+    type="hidden"
+    name="api"
+    value="submit"
+  >
+
+
+  <input
+    type="hidden"
+    id="apiClientId"
+    name="clientId"
+  >
+
+
+  <input
+    type="hidden"
+    id="apiClientName"
+    name="clientName"
+  >
+
+
+  <input
+    type="hidden"
+    id="apiRating"
+    name="rating"
+  >
+
+
+  <input
+    type="hidden"
+    id="apiSatisfaction"
+    name="satisfaction"
+  >
+
+
+  <input
+    type="hidden"
+    id="apiFeedback"
+    name="feedback"
+  >
+
+
+  <input
+    type="hidden"
+    id="apiGuidance"
+    name="guidance"
+  >
+
+
+  <input
+    type="hidden"
+    id="apiRecommendation"
+    name="recommendation"
+  >
+
+
+</form>
+
+
+<!-- SUBMIT -->
+
+<button
+  id="submitButton"
+  class="submit-button"
+>
+
+  Submit Feedback
+
+</button>
+
+
+</section>
+
+
+<!-- =================================
+     THANK YOU
+================================= -->
+
+<section
+  id="thankYou"
+  class="thank-you hidden"
+>
+
+
+  <div class="heart">
+    ❤️
+  </div>
+
+
+  <h2>
+    Thank You!
+  </h2>
+
+
+  <p id="thankYouMessage"></p>
+
+
+  <!-- =================================
+       GIFT
+  ================================= -->
+
+  <div
+    id="giftBox"
+    class="gift hidden"
+  >
+
+
+    <div class="gift-icon">
+      🎁
+    </div>
+
+
+    <h3>
+      Your Complimentary Vastu Gift
+    </h3>
+
+
+    <p>
+
+      As a token of appreciation for
+      sharing your experience, your
+      complimentary Vastu Supportive
+      Remedies Guide is ready for you.
+
+    </p>
+
+
+    <a
+      href="https://drive.google.com/file/d/1yEKiqcOy0zmHz6oixxcqHos3ULLYXh2k/view?usp=sharing"
+      target="_blank"
+      rel="noopener"
+    >
+
+      🎁 Get Your Vastu Guide
+
+    </a>
+
+
+  </div>
+
+
+</section>
+
+
+</main>
+
+
+<div class="footer">
+
+  Cosmic Harmmony © 2026
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+/* =================================
+   VARIABLES
+================================= */
+
+let selectedRating = 0;
+
+let submitting = false;
+
+
+/* =================================
+   STAR RATING
+================================= */
+
+document
+  .querySelectorAll(".star")
+  .forEach(function(star) {
+
+
+    star.addEventListener(
+      "click",
+      function() {
+
+
+        if (submitting) {
+
+          return;
+
+        }
+
+
+        selectedRating =
+          Number(
+            star.dataset.rating
+          );
+
+
+        document
+          .querySelectorAll(".star")
+          .forEach(function(item) {
+
+
+            item.classList.toggle(
+
+              "active",
+
+              Number(
+                item.dataset.rating
+              ) <= selectedRating
+
+            );
+
+          });
+
+
+        const ratingText =
+          document.getElementById(
+            "ratingText"
+          );
+
+
+        if (
+          selectedRating >= 4
+        ) {
+
+          ratingText.textContent =
+            "We are glad you had a good experience! ❤️";
+
+        }
+
+        else if (
+          selectedRating === 3
+        ) {
+
+          ratingText.textContent =
+            "Thank you for your feedback.";
+
+        }
+
+        else {
+
+          ratingText.textContent =
+            "We appreciate your honest feedback.";
+
+        }
+
+      }
+
+    );
+
+  });
+
+
+/* =================================
+   RADIO SELECTION
+================================= */
+
+document
+  .querySelectorAll(".option input")
+  .forEach(function(input) {
+
+
+    input.addEventListener(
+      "change",
+      function() {
+
+
+        document
+          .querySelectorAll(
+            'input[name="' +
+            input.name +
+            '"]'
+          )
+          .forEach(function(item) {
+
+
+            item
+              .closest(".option")
+              .classList
+              .remove(
+                "selected"
+              );
+
+          });
+
+
+        input
+          .closest(".option")
+          .classList
+          .add(
+            "selected"
+          );
+
+      }
+
+    );
+
+  });
+
+
+/* =================================
+   CHARACTER COUNT
+================================= */
+
+document
+  .getElementById("experience")
+  .addEventListener(
+    "input",
+    function() {
+
+
+      document
+        .getElementById(
+          "characterCount"
+        )
+        .textContent =
+
+        this.value.length +
+        " / 200";
+
+    }
+
+  );
+
+
+/* =================================
+   ERROR MESSAGE
+================================= */
+
+function showError(
+  message
+) {
+
+
+  const error =
+    document.getElementById(
+      "error"
+    );
+
+
+  error.textContent =
+    message;
+
+
+  error.classList.remove(
+    "hidden"
+  );
+
+
+  error.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+}
+
+
+/* =================================
+   CLIENT ID
+================================= */
+
+function generateClientId() {
+
+
+  return (
+
+    "CANVA-" +
+
+    Date.now() +
+
+    "-" +
+
+    Math.floor(
+      100000 +
+      Math.random() * 900000
+    )
+
+  );
+
+}
+
+
+/* =================================
+   SUBMIT FEEDBACK
+================================= */
+
+document
+  .getElementById("submitButton")
+  .addEventListener(
+    "click",
+    function() {
+
+
+      if (submitting) {
+
+        return;
+
+      }
+
+
+      const name =
+        document
+          .getElementById(
+            "clientName"
+          )
+          .value
+          .trim();
+
+
+      const experience =
+        document
+          .getElementById(
+            "experience"
+          )
+          .value
+          .trim();
+
+
+      const satisfaction =
+        document
+          .querySelector(
+            'input[name="satisfaction"]:checked'
+          );
+
+
+      const guidance =
+        document
+          .querySelector(
+            'input[name="guidance"]:checked'
+          );
+
+
+      const recommendation =
+        document
+          .querySelector(
+            'input[name="recommendation"]:checked'
+          );
+
+
+      document
+        .getElementById(
+          "error"
+        )
+        .classList
+        .add(
+          "hidden"
+        );
+
+
+      /* NAME */
+
+      if (!name) {
+
+        showError(
+          "Please enter your name."
+        );
+
+        return;
+
+      }
+
+
+      /* RATING */
+
+      if (!selectedRating) {
+
+        showError(
+          "Please select a star rating."
+        );
+
+        return;
+
+      }
+
+
+      /* SATISFACTION */
+
+      if (!satisfaction) {
+
+        showError(
+          "Please select your satisfaction level."
+        );
+
+        return;
+
+      }
+
+
+      /* EXPERIENCE */
+
+      if (
+        experience.length < 20
+      ) {
+
+        showError(
+          "Please share at least 20 characters about your experience."
+        );
+
+        return;
+
+      }
+
+
+      if (
+        experience.length > 200
+      ) {
+
+        showError(
+          "Your experience must not exceed 200 characters."
+        );
+
+        return;
+
+      }
+
+
+      /* GUIDANCE */
+
+      if (!guidance) {
+
+        showError(
+          "Please tell us how you found the guidance provided in the report."
+        );
+
+        return;
+
+      }
+
+
+      /* RECOMMENDATION */
+
+      if (!recommendation) {
+
+        showError(
+          "Please select whether you would recommend our services."
+        );
+
+        return;
+
+      }
+
+
+      /* =================================
+         START SUBMISSION
+      ================================= */
+
+      submitting = true;
+
+
+      const button =
+        document.getElementById(
+          "submitButton"
+        );
+
+
+      button.disabled =
+        true;
+
+
+      button.textContent =
+        "Submitting Feedback...";
+
+
+      /* =================================
+         FILL API FORM
+      ================================= */
+
+      document
+        .getElementById(
+          "apiClientId"
+        )
+        .value =
+        generateClientId();
+
+
+      document
+        .getElementById(
+          "apiClientName"
+        )
+        .value =
+        name;
+
+
+      document
+        .getElementById(
+          "apiRating"
+        )
+        .value =
+        selectedRating;
+
+
+      document
+        .getElementById(
+          "apiSatisfaction"
+        )
+        .value =
+        satisfaction.value;
+
+
+      document
+        .getElementById(
+          "apiFeedback"
+        )
+        .value =
+        experience;
+
+
+      document
+        .getElementById(
+          "apiGuidance"
+        )
+        .value =
+        guidance.value;
+
+
+      document
+        .getElementById(
+          "apiRecommendation"
+        )
+        .value =
+        recommendation.value;
+
+
+      /* =================================
+         SEND TO APPS SCRIPT
+      ================================= */
+
+      document
+        .getElementById(
+          "apiForm"
+        )
+        .submit();
+
+
+      /* =================================
+         SHOW THANK YOU
+      ================================= */
+
+      setTimeout(
+        function() {
+
+
+          document
+            .getElementById(
+              "feedbackForm"
+            )
+            .classList
+            .add(
+              "hidden"
+            );
+
+
+          document
+            .getElementById(
+              "thankYou"
+            )
+            .classList
+            .remove(
+              "hidden"
+            );
+
+
+          /* =================================
+             GIFT LOGIC
+          ================================= */
+
+          if (
+            selectedRating >= 4
+          ) {
+
+
+            document
+              .getElementById(
+                "thankYouMessage"
+              )
+              .innerHTML =
+
+              "Thank you for your valuable feedback!<br>" +
+
+              "Your complimentary Vastu guide is ready for you.";
+
+
+            document
+              .getElementById(
+                "giftBox"
+              )
+              .classList
+              .remove(
+                "hidden"
+              );
+
+          }
+
+          else {
+
+
+            document
+              .getElementById(
+                "thankYouMessage"
+              )
+              .innerHTML =
+
+              "Thank you for sharing your honest feedback.<br>" +
+
+              "Your feedback helps us improve our services.";
+
+          }
+
+
+          window.scrollTo(
+            0,
+            0
+          );
+
+
+        },
+
+        700
+
+      );
+
+    }
+
+  );
+
+
+</script>
+
+
+</body>
+
+</html>
