@@ -8,6 +8,9 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
+<meta name="theme-color"
+      content="#315f39">
+
 <title>
 Cosmic Harmmony - Client Feedback
 </title>
@@ -15,9 +18,9 @@ Cosmic Harmmony - Client Feedback
 
 <style>
 
-/* ================================
-   BASIC RESET
-================================ */
+/* =====================================================
+   RESET
+===================================================== */
 
 * {
   box-sizing: border-box;
@@ -25,9 +28,20 @@ Cosmic Harmmony - Client Feedback
 }
 
 
+html,
 body {
 
   margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  min-height: 100%;
+
+}
+
+
+body {
 
   background: #f5f8f2;
 
@@ -41,15 +55,15 @@ body {
 }
 
 
-/* ================================
+/* =====================================================
    MAIN APP
-================================ */
+===================================================== */
 
 .app {
 
   width: 100%;
 
-  max-width: 520px;
+  max-width: 560px;
 
   min-height: 100vh;
 
@@ -60,19 +74,19 @@ body {
 }
 
 
-/* ================================
+/* =====================================================
    HEADER
-================================ */
+===================================================== */
 
 .header {
 
   background: #315f39;
 
-  color: white;
+  color: #ffffff;
 
   text-align: center;
 
-  padding: 28px 20px 24px;
+  padding: 24px 18px 21px;
 
 }
 
@@ -85,42 +99,44 @@ body {
 
   font-weight: 700;
 
+  letter-spacing: .3px;
+
 }
 
 
 .tagline {
 
-  margin: 7px 0 0;
+  margin: 5px 0 0;
 
-  font-size: 13px;
-
-  opacity: 0.9;
+  font-size: 12px;
 
   font-style: italic;
 
+  opacity: .92;
+
 }
 
 
-/* ================================
+/* =====================================================
    CONTENT
-================================ */
+===================================================== */
 
 .content {
 
-  padding: 24px 18px 30px;
+  padding: 23px 17px 30px;
 
 }
 
 
-h2 {
+.form-title {
+
+  margin: 0;
 
   text-align: center;
 
   color: #234d2c;
 
   font-size: 22px;
-
-  margin: 0 0 8px;
 
   line-height: 1.3;
 
@@ -129,33 +145,39 @@ h2 {
 
 .intro {
 
+  margin: 8px auto 24px;
+
+  max-width: 470px;
+
   text-align: center;
 
   color: #687169;
 
   font-size: 14px;
 
-  line-height: 1.6;
-
-  margin: 0 0 27px;
+  line-height: 1.55;
 
 }
 
 
-/* ================================
+/* =====================================================
    QUESTIONS
-================================ */
+===================================================== */
 
 .question {
 
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 
 }
 
 
-.title {
+.question-title {
 
   display: block;
+
+  margin-bottom: 9px;
+
+  color: #26352a;
 
   font-size: 15px;
 
@@ -163,112 +185,138 @@ h2 {
 
   line-height: 1.45;
 
-  margin-bottom: 10px;
-
 }
 
 
 .required {
 
-  color: #c0392b;
+  color: #c62828;
 
 }
 
 
-/* ================================
-   NAME INPUT
-================================ */
+/* =====================================================
+   TEXT INPUT
+===================================================== */
 
-input[type="text"] {
+.text-input {
 
   width: 100%;
 
-  height: 50px;
+  height: 49px;
 
-  padding: 14px;
+  padding: 12px 13px;
 
   border: 1px solid #d5ddd6;
 
-  border-radius: 12px;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #26352a;
+
+  font-family: Arial, sans-serif;
 
   font-size: 16px;
 
   outline: none;
 
-  background: white;
-
 }
 
 
-input[type="text"]:focus,
-textarea:focus {
+.text-input:focus,
+.textarea:focus {
 
   border-color: #5b8c63;
 
+  box-shadow:
+    0 0 0 2px
+    rgba(49, 95, 57, .08);
+
 }
 
 
-/* ================================
+/* =====================================================
    STAR RATING
-================================ */
+===================================================== */
 
-.stars {
+.star-row {
 
   display: flex;
 
   justify-content: center;
 
-  gap: 4px;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 2px;
 
 }
 
 
 .star {
 
-  width: 52px;
+  width: 48px;
 
-  height: 52px;
+  height: 48px;
 
-  display: flex;
+  padding: 0;
 
-  align-items: center;
+  border: 0;
 
-  justify-content: center;
+  background: transparent;
 
-  font-size: 39px;
+  color: #d9dedb;
 
-  color: #d6dbd7;
+  font-size: 38px;
 
-  cursor: pointer;
-
-  user-select: none;
-
-}
-
-
-.star.active {
-
-  color: #e0ad25;
-
-}
-
-
-.rating-text {
+  line-height: 48px;
 
   text-align: center;
 
-  color: #6d766f;
+  cursor: pointer;
 
-  font-size: 13px;
-
-  min-height: 20px;
+  transition:
+    color .12s ease,
+    transform .12s ease;
 
 }
 
 
-/* ================================
+.star.selected {
+
+  color: #e5b52c;
+
+}
+
+
+.star:active {
+
+  transform:
+    scale(.92);
+
+}
+
+
+.rating-message {
+
+  min-height: 20px;
+
+  margin-top: 3px;
+
+  text-align: center;
+
+  color: #687169;
+
+  font-size: 12px;
+
+}
+
+
+/* =====================================================
    RADIO OPTIONS
-================================ */
+===================================================== */
 
 .options {
 
@@ -276,7 +324,7 @@ textarea:focus {
 
   flex-direction: column;
 
-  gap: 9px;
+  gap: 8px;
 
 }
 
@@ -287,13 +335,17 @@ textarea:focus {
 
   align-items: center;
 
-  min-height: 49px;
+  min-height: 48px;
 
-  padding: 12px 13px;
+  padding: 11px 12px;
 
   border: 1px solid #d7ded8;
 
-  border-radius: 11px;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #26352a;
 
   font-size: 14px;
 
@@ -304,7 +356,7 @@ textarea:focus {
 
 .option.selected {
 
-  border-color: #5b8c63;
+  border-color: #6b9872;
 
   background: #f1f7ef;
 
@@ -317,83 +369,92 @@ textarea:focus {
 
   height: 18px;
 
-  margin: 0 11px 0 0;
+  margin: 0 10px 0 0;
 
   accent-color: #315f39;
+
+  flex-shrink: 0;
 
 }
 
 
-/* ================================
+/* =====================================================
    EXPERIENCE
-================================ */
+===================================================== */
 
-textarea {
+.textarea {
 
   width: 100%;
 
-  min-height: 125px;
+  min-height: 115px;
 
-  padding: 14px;
+  padding: 13px;
 
   border: 1px solid #d5ddd6;
 
-  border-radius: 12px;
+  border-radius: 11px;
 
-  resize: none;
+  background: #ffffff;
+
+  color: #26352a;
 
   font-family: Arial, sans-serif;
 
   font-size: 16px;
 
-  line-height: 1.55;
+  line-height: 1.5;
+
+  resize: none;
 
   outline: none;
 
 }
 
 
-.character-count {
+.character-row {
 
   display: flex;
 
   justify-content: space-between;
 
-  margin-top: 7px;
+  margin-top: 6px;
+
+  color: #858d87;
 
   font-size: 11px;
 
-  color: #818981;
-
 }
 
 
-/* ================================
+/* =====================================================
    ERROR
-================================ */
+===================================================== */
 
 .error {
 
-  background: #fff0ef;
-
-  border: 1px solid #f1cecb;
-
-  color: #b3261e;
-
-  border-radius: 11px;
+  margin-bottom: 15px;
 
   padding: 12px;
 
+  border:
+    1px solid #f0c8c5;
+
+  border-radius: 10px;
+
+  background: #fff0ef;
+
+  color: #b3261e;
+
   font-size: 13px;
 
-  margin-bottom: 15px;
+  line-height: 1.45;
 
 }
 
 
-/* ================================
-   SUBMIT
-================================ */
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
 
 .submit-button {
 
@@ -401,13 +462,15 @@ textarea {
 
   min-height: 54px;
 
-  border: none;
+  padding: 13px;
 
-  border-radius: 13px;
+  border: 0;
+
+  border-radius: 12px;
 
   background: #315f39;
 
-  color: white;
+  color: #ffffff;
 
   font-size: 17px;
 
@@ -420,41 +483,68 @@ textarea {
 
 .submit-button:disabled {
 
-  opacity: 0.65;
+  opacity: .65;
 
   cursor: wait;
 
 }
 
 
-/* ================================
-   THANK YOU
-================================ */
+/* =====================================================
+   HIDDEN IFRAME
+===================================================== */
 
-.thank-you {
+#submitFrame {
+
+  display: none;
+
+}
+
+
+/* =====================================================
+   SUCCESS PAGE
+===================================================== */
+
+.success {
+
+  padding:
+    30px 8px 15px;
 
   text-align: center;
 
-  padding: 40px 8px 20px;
+}
+
+
+.success-heart {
+
+  margin-bottom: 7px;
+
+  font-size: 48px;
+
+  line-height: 1;
 
 }
 
 
-.heart {
+.success-title {
 
-  font-size: 50px;
-
-}
-
-
-.thank-you h2 {
+  margin: 0;
 
   color: #315f39;
 
+  font-size: 25px;
+
+  line-height: 1.3;
+
 }
 
 
-.thank-you p {
+.success-message {
+
+  margin:
+    12px auto 0;
+
+  max-width: 430px;
 
   color: #626c64;
 
@@ -465,44 +555,68 @@ textarea {
 }
 
 
-/* ================================
+/* =====================================================
    GIFT BOX
-================================ */
+===================================================== */
 
-.gift {
+.gift-box {
 
-  margin-top: 24px;
+  margin-top: 22px;
 
-  padding: 22px 17px;
+  padding:
+    20px 15px 17px;
+
+  border:
+    1px solid #d5e4ce;
 
   border-radius: 17px;
 
   background: #f3f8ed;
-
-  border: 1px solid #d7e5d0;
 
 }
 
 
 .gift-icon {
 
-  font-size: 37px;
+  margin-bottom: 7px;
+
+  font-size: 35px;
+
+  line-height: 1;
 
 }
 
 
-.gift h3 {
+.gift-title {
+
+  margin: 0;
 
   color: #315f39;
 
-  margin: 8px 0;
-
   font-size: 19px;
+
+  line-height: 1.35;
 
 }
 
 
-.gift a {
+.gift-description {
+
+  margin:
+    10px auto 15px;
+
+  max-width: 390px;
+
+  color: #626c64;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+}
+
+
+.gift-button {
 
   display: flex;
 
@@ -512,28 +626,46 @@ textarea {
 
   width: 100%;
 
-  min-height: 52px;
+  min-height: 51px;
+
+  padding: 12px;
+
+  border-radius: 11px;
 
   background: #315f39;
 
-  color: white;
+  color: #ffffff;
 
   text-decoration: none;
-
-  border-radius: 12px;
 
   font-size: 16px;
 
   font-weight: 700;
 
-  margin-top: 15px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+  padding:
+    5px 15px 22px;
+
+  text-align: center;
+
+  color: #909890;
+
+  font-size: 11px;
 
 }
 
 
-/* ================================
-   HIDDEN
-================================ */
+/* =====================================================
+   UTILITY
+===================================================== */
 
 .hidden {
 
@@ -542,30 +674,121 @@ textarea {
 }
 
 
-/* ================================
-   FOOTER
-================================ */
+/* =====================================================
+   MOBILE
+===================================================== */
 
-.footer {
+@media (max-width: 480px) {
 
-  text-align: center;
+  .header {
 
-  padding: 5px 15px 25px;
+    padding:
+      22px 15px 19px;
 
-  color: #8a928c;
-
-  font-size: 11px;
-
-}
+  }
 
 
-/* ================================
-   HIDDEN IFRAME
-================================ */
+  .brand {
 
-#submitFrame {
+    font-size:
+      23px;
 
-  display: none;
+  }
+
+
+  .content {
+
+    padding:
+      21px 15px 25px;
+
+  }
+
+
+  .form-title {
+
+    font-size:
+      21px;
+
+  }
+
+
+  .intro {
+
+    font-size:
+      13px;
+
+    margin-bottom:
+      22px;
+
+  }
+
+
+  .question {
+
+    margin-bottom:
+      20px;
+
+  }
+
+
+  .star {
+
+    width:
+      45px;
+
+    height:
+      45px;
+
+    line-height:
+      45px;
+
+    font-size:
+      36px;
+
+  }
+
+
+  .star-row {
+
+    gap:
+      3px;
+
+  }
+
+
+  .success {
+
+    padding-top:
+      25px;
+
+  }
+
+
+  .success-heart {
+
+    font-size:
+      44px;
+
+  }
+
+
+  .success-title {
+
+    font-size:
+      23px;
+
+  }
+
+
+  .gift-box {
+
+    margin-top:
+      20px;
+
+    padding:
+      18px 14px 15px;
+
+  }
 
 }
 
@@ -580,9 +803,9 @@ textarea {
 <div class="app">
 
 
-<!-- =================================
+<!-- =================================================
      HEADER
-================================= -->
+================================================= -->
 
 <header class="header">
 
@@ -600,32 +823,38 @@ textarea {
 <main class="content">
 
 
-<!-- =================================
+<!-- =================================================
      FEEDBACK FORM
-================================= -->
+================================================= -->
 
-<section id="feedbackForm">
+<section
+  id="feedbackSection"
+>
 
 
-<h2>
+<h2 class="form-title">
+
   We'd Love Your Feedback
+
 </h2>
 
 
 <p class="intro">
 
-  Thank you for choosing Cosmic Harmmony
-  for your Name Correction.
+  Thank you for choosing
+  Cosmic Harmmony for your Name Correction.
   Please take a moment to share your experience.
 
 </p>
 
 
-<!-- QUESTION 1 -->
+<!-- =================================================
+     QUESTION 1
+================================================= -->
 
 <div class="question">
 
-  <label class="title">
+  <label class="question-title">
 
     1. Your Name
 
@@ -635,20 +864,31 @@ textarea {
 
 
   <input
-    type="text"
+
     id="clientName"
+
+    class="text-input"
+
+    type="text"
+
     maxlength="100"
+
+    autocomplete="name"
+
     placeholder="Enter your name"
+
   >
 
 </div>
 
 
-<!-- QUESTION 2 -->
+<!-- =================================================
+     QUESTION 2
+================================================= -->
 
 <div class="question">
 
-  <label class="title">
+  <label class="question-title">
 
     2. How would you rate your overall experience?
 
@@ -657,49 +897,65 @@ textarea {
   </label>
 
 
-  <div class="stars">
+  <div class="star-row">
 
-    <span
+
+    <button
+      type="button"
       class="star"
       data-rating="1"
+      aria-label="1 star"
     >
       ★
-    </span>
+    </button>
 
-    <span
+
+    <button
+      type="button"
       class="star"
       data-rating="2"
+      aria-label="2 stars"
     >
       ★
-    </span>
+    </button>
 
-    <span
+
+    <button
+      type="button"
       class="star"
       data-rating="3"
+      aria-label="3 stars"
     >
       ★
-    </span>
+    </button>
 
-    <span
+
+    <button
+      type="button"
       class="star"
       data-rating="4"
+      aria-label="4 stars"
     >
       ★
-    </span>
+    </button>
 
-    <span
+
+    <button
+      type="button"
       class="star"
       data-rating="5"
+      aria-label="5 stars"
     >
       ★
-    </span>
+    </button>
+
 
   </div>
 
 
   <div
-    id="ratingText"
-    class="rating-text"
+    id="ratingMessage"
+    class="rating-message"
   >
 
     Please select a rating
@@ -709,11 +965,13 @@ textarea {
 </div>
 
 
-<!-- QUESTION 3 -->
+<!-- =================================================
+     QUESTION 3
+================================================= -->
 
 <div class="question">
 
-  <label class="title">
+  <label class="question-title">
 
     3. Are you satisfied with your corrected name?
 
@@ -782,11 +1040,13 @@ textarea {
 </div>
 
 
-<!-- QUESTION 4 -->
+<!-- =================================================
+     QUESTION 4
+================================================= -->
 
 <div class="question">
 
-  <label class="title">
+  <label class="question-title">
 
     4. How was your overall experience
     with Cosmic Harmmony?
@@ -797,13 +1057,19 @@ textarea {
 
 
   <textarea
+
     id="experience"
+
+    class="textarea"
+
     maxlength="200"
+
     placeholder="Please share a few words about your experience..."
+
   ></textarea>
 
 
-  <div class="character-count">
+  <div class="character-row">
 
     <span>
       Minimum 20 characters
@@ -818,11 +1084,13 @@ textarea {
 </div>
 
 
-<!-- QUESTION 5 -->
+<!-- =================================================
+     QUESTION 5
+================================================= -->
 
 <div class="question">
 
-  <label class="title">
+  <label class="question-title">
 
     5. How did you find the guidance
     provided in the report?
@@ -892,11 +1160,13 @@ textarea {
 </div>
 
 
-<!-- QUESTION 6 -->
+<!-- =================================================
+     QUESTION 6
+================================================= -->
 
 <div class="question">
 
-  <label class="title">
+  <label class="question-title">
 
     6. Would you recommend our services to anyone?
 
@@ -952,7 +1222,9 @@ textarea {
 </div>
 
 
-<!-- ERROR -->
+<!-- =================================================
+     ERROR
+================================================= -->
 
 <div
   id="error"
@@ -960,27 +1232,43 @@ textarea {
 ></div>
 
 
-<!--
-  HIDDEN SUBMISSION FORM
+<!-- =================================================
+     HIDDEN IFRAME
 
-  This sends the data to your
-  already-tested Apps Script API.
--->
+     IMPORTANT:
+     The form submission goes directly to the
+     Apps Script API using a normal GET request.
+
+     No fetch()
+     No Canva API
+     No CORS JavaScript
+================================================= -->
 
 <iframe
-  name="submitFrame"
+
   id="submitFrame"
+
+  name="submitFrame"
+
+  title="Submission response"
+
 ></iframe>
 
 
+<!-- =================================================
+     BACKEND SUBMISSION FORM
+================================================= -->
+
 <form
+
   id="apiForm"
 
   method="GET"
 
+  target="submitFrame"
+
   action="https://script.google.com/macros/s/AKfycbywO6c54iob9ndxMsrSTHeDdvr_miZNEvo_r0mydmc_UNY6bnEU94GPNSmqePGaaAY/exec"
 
-  target="submitFrame"
 >
 
 
@@ -1043,11 +1331,18 @@ textarea {
 </form>
 
 
-<!-- SUBMIT -->
+<!-- =================================================
+     SUBMIT BUTTON
+================================================= -->
 
 <button
+
   id="submitButton"
+
   class="submit-button"
+
+  type="button"
+
 >
 
   Submit Feedback
@@ -1058,36 +1353,42 @@ textarea {
 </section>
 
 
-<!-- =================================
-     THANK YOU
-================================= -->
+<!-- =================================================
+     SUCCESS SECTION
+================================================= -->
 
 <section
-  id="thankYou"
-  class="thank-you hidden"
+
+  id="successSection"
+
+  class="success hidden"
+
 >
 
 
-  <div class="heart">
+  <div class="success-heart">
     ❤️
   </div>
 
 
-  <h2>
+  <h2 class="success-title">
     Thank You!
   </h2>
 
 
-  <p id="thankYouMessage"></p>
+  <p
+    id="successMessage"
+    class="success-message"
+  ></p>
 
 
-  <!-- =================================
+  <!-- =================================================
        GIFT
-  ================================= -->
+  ================================================= -->
 
   <div
     id="giftBox"
-    class="gift hidden"
+    class="gift-box hidden"
   >
 
 
@@ -1096,12 +1397,14 @@ textarea {
     </div>
 
 
-    <h3>
+    <h3 class="gift-title">
+
       Your Complimentary Vastu Gift
+
     </h3>
 
 
-    <p>
+    <p class="gift-description">
 
       As a token of appreciation for
       sharing your experience, your
@@ -1112,9 +1415,15 @@ textarea {
 
 
     <a
+
+      class="gift-button"
+
       href="https://drive.google.com/file/d/1yEKiqcOy0zmHz6oixxcqHos3ULLYXh2k/view?usp=sharing"
+
       target="_blank"
-      rel="noopener"
+
+      rel="noopener noreferrer"
+
     >
 
       🎁 Get Your Vastu Guide
@@ -1131,11 +1440,11 @@ textarea {
 </main>
 
 
-<div class="footer">
+<footer class="footer">
 
   Cosmic Harmmony © 2026
 
-</div>
+</footer>
 
 
 </div>
@@ -1143,149 +1452,173 @@ textarea {
 
 <script>
 
-
-/* =================================
+/* =====================================================
    VARIABLES
-================================= */
+===================================================== */
 
 let selectedRating = 0;
 
-let submitting = false;
+let submissionStarted = false;
+
+let submissionFinished = false;
 
 
-/* =================================
+/* =====================================================
    STAR RATING
-================================= */
+===================================================== */
 
-document
-  .querySelectorAll(".star")
-  .forEach(function(star) {
-
-
-    star.addEventListener(
-      "click",
-      function() {
+const stars =
+  document.querySelectorAll(".star");
 
 
-        if (submitting) {
-
-          return;
-
-        }
+stars.forEach(function(star) {
 
 
-        selectedRating =
-          Number(
-            star.dataset.rating
-          );
+  star.addEventListener(
+    "click",
+    function() {
 
 
-        document
-          .querySelectorAll(".star")
-          .forEach(function(item) {
+      if (submissionStarted) {
 
-
-            item.classList.toggle(
-
-              "active",
-
-              Number(
-                item.dataset.rating
-              ) <= selectedRating
-
-            );
-
-          });
-
-
-        const ratingText =
-          document.getElementById(
-            "ratingText"
-          );
-
-
-        if (
-          selectedRating >= 4
-        ) {
-
-          ratingText.textContent =
-            "We are glad you had a good experience! ❤️";
-
-        }
-
-        else if (
-          selectedRating === 3
-        ) {
-
-          ratingText.textContent =
-            "Thank you for your feedback.";
-
-        }
-
-        else {
-
-          ratingText.textContent =
-            "We appreciate your honest feedback.";
-
-        }
+        return;
 
       }
 
-    );
 
-  });
+      selectedRating =
+        Number(
+          star.dataset.rating
+        );
 
 
-/* =================================
-   RADIO SELECTION
-================================= */
+      stars.forEach(
+        function(item) {
+
+
+          item.classList.toggle(
+
+            "selected",
+
+            Number(
+              item.dataset.rating
+            ) <= selectedRating
+
+          );
+
+        }
+      );
+
+
+      const message =
+        document.getElementById(
+          "ratingMessage"
+        );
+
+
+      if (
+        selectedRating === 5
+      ) {
+
+        message.textContent =
+          "Excellent! Thank you for your feedback. ❤️";
+
+      }
+
+      else if (
+        selectedRating === 4
+      ) {
+
+        message.textContent =
+          "Thank you! We're glad you had a good experience. ❤️";
+
+      }
+
+      else if (
+        selectedRating === 3
+      ) {
+
+        message.textContent =
+          "Thank you for your honest feedback.";
+
+      }
+
+      else if (
+        selectedRating === 2
+      ) {
+
+        message.textContent =
+          "We appreciate your honest feedback.";
+
+      }
+
+      else {
+
+        message.textContent =
+          "We appreciate your honest feedback.";
+
+      }
+
+    }
+
+  );
+
+});
+
+
+/* =====================================================
+   RADIO BUTTON VISUALS
+===================================================== */
 
 document
   .querySelectorAll(".option input")
-  .forEach(function(input) {
+  .forEach(
+    function(input) {
 
 
-    input.addEventListener(
-      "change",
-      function() {
+      input.addEventListener(
+        "change",
+        function() {
 
 
-        document
-          .querySelectorAll(
-            'input[name="' +
-            input.name +
-            '"]'
-          )
-          .forEach(function(item) {
+          document
+            .querySelectorAll(
+              'input[name="' +
+              input.name +
+              '"]'
+            )
+            .forEach(
+              function(item) {
 
 
-            item
-              .closest(".option")
-              .classList
-              .remove(
-                "selected"
-              );
+                item
+                  .closest(".option")
+                  .classList
+                  .remove(
+                    "selected"
+                  );
 
-          });
-
-
-        input
-          .closest(".option")
-          .classList
-          .add(
-            "selected"
-          );
-
-      }
-
-    );
-
-  });
+              }
+            );
 
 
-/* =================================
-   CHARACTER COUNT
-================================= */
+          input
+            .closest(".option")
+            .classList
+            .add(
+              "selected"
+            );
+
+        }
+      );
+
+    }
+  );
+
+
+/* =====================================================
+   CHARACTER COUNTER
+===================================================== */
 
 document
   .getElementById("experience")
@@ -1304,13 +1637,12 @@ document
         " / 200";
 
     }
-
   );
 
 
-/* =================================
-   ERROR MESSAGE
-================================= */
+/* =====================================================
+   ERROR
+===================================================== */
 
 function showError(
   message
@@ -1340,9 +1672,9 @@ function showError(
 }
 
 
-/* =================================
+/* =====================================================
    CLIENT ID
-================================= */
+===================================================== */
 
 function generateClientId() {
 
@@ -1365,18 +1697,118 @@ function generateClientId() {
 }
 
 
-/* =================================
-   SUBMIT FEEDBACK
-================================= */
+/* =====================================================
+   SUCCESS PAGE
+===================================================== */
+
+function showSuccessPage() {
+
+
+  if (submissionFinished) {
+
+    return;
+
+  }
+
+
+  submissionFinished = true;
+
+
+  document
+    .getElementById(
+      "feedbackSection"
+    )
+    .classList
+    .add(
+      "hidden"
+    );
+
+
+  document
+    .getElementById(
+      "successSection"
+    )
+    .classList
+    .remove(
+      "hidden"
+    );
+
+
+  const successMessage =
+    document.getElementById(
+      "successMessage"
+    );
+
+
+  /*
+   * 4 or 5 stars
+   */
+
+  if (
+    selectedRating >= 4
+  ) {
+
+
+    successMessage.innerHTML =
+
+      "Thank you for your valuable feedback!<br>" +
+
+      "Your complimentary Vastu guide is ready for you.";
+
+
+    document
+      .getElementById(
+        "giftBox"
+      )
+      .classList
+      .remove(
+        "hidden"
+      );
+
+
+  }
+
+
+  /*
+   * 1, 2 or 3 stars
+   */
+
+  else {
+
+
+    successMessage.innerHTML =
+
+      "Thank you for sharing your honest feedback.<br>" +
+
+      "Your feedback helps us improve our services.";
+
+  }
+
+
+  window.scrollTo(
+    0,
+    0
+  );
+
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
 
 document
-  .getElementById("submitButton")
+  .getElementById(
+    "submitButton"
+  )
   .addEventListener(
     "click",
     function() {
 
 
-      if (submitting) {
+      if (
+        submissionStarted
+      ) {
 
         return;
 
@@ -1432,7 +1864,9 @@ document
         );
 
 
-      /* NAME */
+      /* ---------------------------------------------
+         VALIDATE NAME
+      --------------------------------------------- */
 
       if (!name) {
 
@@ -1445,7 +1879,9 @@ document
       }
 
 
-      /* RATING */
+      /* ---------------------------------------------
+         VALIDATE RATING
+      --------------------------------------------- */
 
       if (!selectedRating) {
 
@@ -1458,7 +1894,9 @@ document
       }
 
 
-      /* SATISFACTION */
+      /* ---------------------------------------------
+         VALIDATE SATISFACTION
+      --------------------------------------------- */
 
       if (!satisfaction) {
 
@@ -1471,7 +1909,9 @@ document
       }
 
 
-      /* EXPERIENCE */
+      /* ---------------------------------------------
+         VALIDATE EXPERIENCE
+      --------------------------------------------- */
 
       if (
         experience.length < 20
@@ -1499,7 +1939,9 @@ document
       }
 
 
-      /* GUIDANCE */
+      /* ---------------------------------------------
+         VALIDATE GUIDANCE
+      --------------------------------------------- */
 
       if (!guidance) {
 
@@ -1512,7 +1954,9 @@ document
       }
 
 
-      /* RECOMMENDATION */
+      /* ---------------------------------------------
+         VALIDATE RECOMMENDATION
+      --------------------------------------------- */
 
       if (!recommendation) {
 
@@ -1525,11 +1969,11 @@ document
       }
 
 
-      /* =================================
+      /* ---------------------------------------------
          START SUBMISSION
-      ================================= */
+      --------------------------------------------- */
 
-      submitting = true;
+      submissionStarted = true;
 
 
       const button =
@@ -1538,17 +1982,16 @@ document
         );
 
 
-      button.disabled =
-        true;
+      button.disabled = true;
 
 
       button.textContent =
         "Submitting Feedback...";
 
 
-      /* =================================
+      /* ---------------------------------------------
          FILL API FORM
-      ================================= */
+      --------------------------------------------- */
 
       document
         .getElementById(
@@ -1606,9 +2049,17 @@ document
         recommendation.value;
 
 
-      /* =================================
-         SEND TO APPS SCRIPT
-      ================================= */
+      /* ---------------------------------------------
+         SEND NORMAL GET FORM
+
+         IMPORTANT:
+         No fetch()
+         No XMLHttpRequest()
+         No CORS JavaScript
+
+         This is the same method that we
+         successfully tested with APITest.html.
+      --------------------------------------------- */
 
       document
         .getElementById(
@@ -1617,95 +2068,43 @@ document
         .submit();
 
 
-      /* =================================
-         SHOW THANK YOU
-      ================================= */
-
-      setTimeout(
-        function() {
+    }
+  );
 
 
-          document
-            .getElementById(
-              "feedbackForm"
-            )
-            .classList
-            .add(
-              "hidden"
-            );
+/* =====================================================
+   WAIT FOR APPS SCRIPT RESPONSE
+===================================================== */
+
+document
+  .getElementById(
+    "submitFrame"
+  )
+  .addEventListener(
+    "load",
+    function() {
 
 
-          document
-            .getElementById(
-              "thankYou"
-            )
-            .classList
-            .remove(
-              "hidden"
-            );
+      /*
+       * Ignore any load before the user
+       * actually submitted the form.
+       */
+
+      if (!submissionStarted) {
+
+        return;
+
+      }
 
 
-          /* =================================
-             GIFT LOGIC
-          ================================= */
+      /*
+       * Apps Script has returned.
+       * Now show the Thank You page.
+       */
 
-          if (
-            selectedRating >= 4
-          ) {
-
-
-            document
-              .getElementById(
-                "thankYouMessage"
-              )
-              .innerHTML =
-
-              "Thank you for your valuable feedback!<br>" +
-
-              "Your complimentary Vastu guide is ready for you.";
-
-
-            document
-              .getElementById(
-                "giftBox"
-              )
-              .classList
-              .remove(
-                "hidden"
-              );
-
-          }
-
-          else {
-
-
-            document
-              .getElementById(
-                "thankYouMessage"
-              )
-              .innerHTML =
-
-              "Thank you for sharing your honest feedback.<br>" +
-
-              "Your feedback helps us improve our services.";
-
-          }
-
-
-          window.scrollTo(
-            0,
-            0
-          );
-
-
-        },
-
-        700
-
-      );
+      showSuccessPage();
 
     }
-
   );
 
 
